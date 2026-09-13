@@ -13,5 +13,26 @@
 
     <p>Graph-Based Multi-Drone Pathfinding and Collision Avoidance</p>
 
+    <div id="grid"></div>
+
+    <button id="startSimulation">Start Simulation</button>
+
+    <div id="statusPanel">
+    <h2>Simulation Status</h2>
+    <p>Status: <span id="status">Ready</span></p>
+    <p>Drones: <span id="droneCount">3</span></p>
+    <p>Algorithm: <span id="algorithm">BFS</span></p>
+    <p>Collisions: <span id="collisionCount">0</span></p>
+    </div>
+
+    <div class="legend">
+    <span>🔵 D1 Path</span>
+    <span>🟢 D2 Path</span>
+    <span>🔴 D3 Path</span>
+    <span>⚫ Obstacle</span>
+    <span>🟡 Target</span>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>

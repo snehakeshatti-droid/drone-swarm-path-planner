@@ -1,0 +1,125 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f8;
+    text-align: center;
+}
+
+h1 {
+    margin-top: 30px;
+    color: #222;
+}
+
+p {
+    color: #555;
+    font-size: 18px;
+}
+
+#grid {
+    width: 500px;
+    height: 500px;
+    margin: 30px auto;
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(10, 1fr);
+    border: 3px solid #222;
+}
+
+.cell {
+    border: 1px solid #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 11px;
+    box-sizing: border-box;
+    background-color: white;
+}
+
+.obstacle {
+    background-color: #333;
+}
+
+.drone1,
+.drone2,
+.drone3 {
+    font-weight: bold;
+    color: white;
+}
+
+.drone1 {
+    background-color: #007bff;
+}
+
+.drone2 {
+    background-color: #28a745;
+}
+
+.drone3 {
+    background-color: #dc3545;
+}
+
+.target {
+    background-color: gold;
+    font-weight: bold;
+    color: black;
+}
+
+.path1 {
+    background-color: #b3d9ff;
+    border: 3px solid #007bff;
+    box-sizing: border-box;
+}
+
+.path2 {
+    background-color: #b8e6b8;
+}
+
+.path3 {
+    background-color: #ffb3b3;
+}
+
+.legend {
+    margin: 20px auto;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+    font-size: 15px;
+}
+
+.legend span {
+    font-weight: bold;
+}
+
+#startSimulation {
+    padding: 12px 25px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: white;
+}
+
+#startSimulation:hover {
+    background-color: #0056b3;
+}
+
+#statusPanel {
+    width: 500px;
+    margin: 20px auto;
+    padding: 15px;
+    border: 2px solid #222;
+    border-radius: 8px;
+    background-color: white;
+}
+
+#statusPanel h2 {
+    margin-top: 0;
+}
+
+#statusPanel p {
+    margin: 8px;
+    font-size: 16px;
+}
