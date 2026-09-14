@@ -15,7 +15,15 @@
 
     <div id="grid"></div>
 
+    <label for="algorithmSelect">Select Algorithm:</label>
+
+    <select id="algorithmSelect">
+        <option value="bfs">BFS</option>
+        <option value="dijkstra">Dijkstra</option>
+    </select>
+
     <button id="startSimulation">Start Simulation</button>
+    <button id="resetSimulation">Reset Simulation</button>
 
     <div id="statusPanel">
     <h2>Simulation Status</h2>
@@ -23,6 +31,8 @@
     <p>Drones: <span id="droneCount">3</span></p>
     <p>Algorithm: <span id="algorithm">BFS</span></p>
     <p>Collisions: <span id="collisionCount">0</span></p>
+    <p>Path Length: <span id="pathLength">0</span></p>
+    <p>Coverage: <span id="coverage">0</span>%</p>
     </div>
 
     <div class="legend">
