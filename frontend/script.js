@@ -17,6 +17,7 @@ let collisionCount = 0;
 let simulationRunning = false;
 let totalPathLength = 0;
 let coveragePercentage = 0;
+let simulation = null;
 
 const grid = document.getElementById("grid");
 
@@ -660,7 +661,7 @@ startButton.addEventListener(
         // SIMULATION LOOP
         // ==========================================
 
-        const simulation =
+        simulation =
             setInterval(
                 () => {
 
@@ -1094,6 +1095,10 @@ resetButton.addEventListener("click", () => {
 
     // Stop any running simulation
     simulationRunning = false;
+        if (simulation) {
+        clearInterval(simulation);
+        simulation = null;
+    }
 
     // Reset collision count
     collisionCount = 0;
