@@ -38,3 +38,21 @@ CREATE TABLE Simulations (
     coverage_percentage DECIMAL(5,2) NOT NULL,
     simulation_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
+
+CREATE TABLE Collision_Events (
+    collision_id INT PRIMARY KEY,
+    simulation_id INT NOT NULL,
+    drone1_id INT NOT NULL,
+    drone2_id INT NOT NULL,
+    collision_step INT NOT NULL,
+    collision_type VARCHAR(30) NOT NULL,
+    
+    FOREIGN KEY (simulation_id)
+        REFERENCES Simulations(simulation_id),
+
+    FOREIGN KEY (drone1_id)
+        REFERENCES Drones(drone_id),
+
+    FOREIGN KEY (drone2_id)
+        REFERENCES Drones(drone_id)
+);
