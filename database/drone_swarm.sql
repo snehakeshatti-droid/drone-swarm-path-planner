@@ -29,3 +29,12 @@ VALUES
 (4, 6, 2),
 (5, 6, 3),
 (6, 6, 4);
+
+CREATE TABLE Simulations (
+    simulation_id INT PRIMARY KEY,
+    algorithm VARCHAR(20) NOT NULL,
+    total_path_length INT NOT NULL,
+    collision_count INT NOT NULL,
+    coverage_percentage DECIMAL(5,2) NOT NULL,
+    simulation_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
