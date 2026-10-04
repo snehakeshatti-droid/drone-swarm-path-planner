@@ -56,3 +56,14 @@ CREATE TABLE Collision_Events (
     FOREIGN KEY (drone2_id)
         REFERENCES Drones(drone_id)
 );
+
+INSERT INTO Simulations
+(simulation_id, algorithm, total_path_length, collision_count, coverage_percentage)
+VALUES
+(1, 'BFS', 54, 2, 38.30);
+
+INSERT INTO Collision_Events
+(collision_id, simulation_id, drone1_id, drone2_id, collision_step, collision_type)
+VALUES
+(1, 1, 1, 3, 5, 'Swap Collision'),
+(2, 1, 1, 2, 14, 'Swap Collision');
